@@ -1,5 +1,5 @@
 #JMS Example
-Example for implementing a Queue (Point-to-Point) using Apache CXF (for explanation see [Tortsen Horn's tech docs](http://www.torsten-horn.de/techdocs/jee-jms.htm "Tortsen Horn's tech docs")).
+Example for implementing a simple Queue (Point-to-Point) using Apache CXF (for explanation see [Tortsen Horn's tech docs](http://www.torsten-horn.de/techdocs/jee-jms.htm "Tortsen Horn's tech docs")).
 
 ##Technology Stack
 * Apache ActiveMQ .. JMS implementation
