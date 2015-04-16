@@ -23,7 +23,7 @@ public class OrphanTest {
 	 */
 	public static void main(String[] args) {
 		EntityManagerFactory factory = Persistence
-				.createEntityManagerFactory("orphanUnit");
+				.createEntityManagerFactory("persistenceUnit");
 		EntityManager manager = factory.createEntityManager();
 		OrphanTest test = new OrphanTest(manager);
 

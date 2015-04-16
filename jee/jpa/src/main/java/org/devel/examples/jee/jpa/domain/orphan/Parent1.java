@@ -14,7 +14,7 @@ public class Parent1 {
 	private Long id;
 
 	// Owner
-	@OneToOne(cascade=CascadeType.PERSIST)
+	@OneToOne(cascade=CascadeType.PERSIST, orphanRemoval=true)
 	private Child child;
 
 	private String name;
