@@ -19,7 +19,7 @@ public class Department {
 	
 	private String name;
 	
-	@OneToMany(mappedBy="department",cascade=CascadeType.PERSIST)
+	@OneToMany(mappedBy="department",cascade=CascadeType.PERSIST, orphanRemoval=true)
 	private List<Employee> employees = new ArrayList<Employee>();
 	
 	

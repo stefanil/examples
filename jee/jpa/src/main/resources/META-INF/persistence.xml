@@ -13,10 +13,29 @@
 			<property name="javax.persistence.jdbc.password" value="jpa" />
 
 			<!-- EclipseLink should create the database schema automatically -->
-			<property name="eclipselink.ddl-generation" value="create-tables" />
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
 			<property name="eclipselink.ddl-generation.output-mode" value="database" />
 			<property name="eclipselink.logging.level" value="SEVERE"/>				
 		</properties>
 
 	</persistence-unit>
+	
+	<persistence-unit name="orphanUnit" transaction-type="RESOURCE_LOCAL">
+		<!-- shouldn't be valid for java SE per specification, but it works for EclipseLink ... -->
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+		
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:derby:simpleDb;create=true" />
+			<property name="javax.persistence.jdbc.user" value="jpa" />
+			<property name="javax.persistence.jdbc.password" value="jpa" />
+
+			<!-- EclipseLink should create the database schema automatically -->
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+			<property name="eclipselink.ddl-generation.output-mode" value="database" />
+			<property name="eclipselink.logging.level" value="SEVERE"/>				
+		</properties>
+
+	</persistence-unit>
+	
 </persistence>

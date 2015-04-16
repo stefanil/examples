@@ -3,3 +3,6 @@
 data
 target
 .settings
+#derby
+derby.log
+simpleDb/
